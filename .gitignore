@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #removing scss
-/scss
+/app/scss/main.scss
 
 #removing gulp
 /gulpfile.js
@@ -31,3 +31,6 @@ yarn-error.log*
 #removing package json
 /package.json
 /package-lock.json
+
+#removing vscode
+.vscode
