@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <div class="nav_container">
+      <div class="nilds_logo">
+        <img src="./assets/Logo-big.png" alt="logo" />
+      </div>
+      <div class="menuLinksDiv">
+        <ul class="menuUL">
+          <li class="menuLinks"><a href="#">HOME</a></li>
+          <li class="menuLinks linkWithChild">
+            <a href="#">THE INSTITUTE</a>
+            <span class="material-symbols-outlined"> arrow_drop_down </span>
+
+            <div class="childLinks">
+              <ul>
+                <li><a href="#">About the Institute</a></li>
+                <li><a href="#">Governing Council</a></li>
+                <li><a href="#">Core Areas</a></li>
+                <li><a href="#">Management</a></li>
+                <li><a href="#">DG's Office</a></li>
+                <li><a href="#">NILDS Organogram</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="menuLinks linkWithChild">
+            <a href="#">NEWS/EVENTS</a
+            ><span class="material-symbols-outlined"> arrow_drop_down </span>
+            <div class="childLinks">
+              <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Quiz Competitions</a></li>
+                <li><a href="#">Media</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="menuLinks linkWithChild">
+            <a href="#">RESOURCES</a
+            ><span class="material-symbols-outlined"> arrow_drop_down </span>
+            <div class="childLinks">
+              <ul>
+                <li><a href="#">National Assembly Resources</a></li>
+                <li class="subLinkDiv">
+                  <a href="#">NILDS Resources</a>
+                  <span class="material-symbols-outlined"> arrow_right </span>
+                  <div class="subChildLinks">
+                    <ul>
+                      <li><a href="#">Legislative Databank</a></li>
+                      <li><a href="#">OPAC</a></li>
+                      <li><a href="#">NJLA</a></li>
+                      <li><a href="#">Book Reviews</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menuLinks linkWithChild">
+            <a href="#">DEPARTMENT</a
+            ><span class="material-symbols-outlined"> arrow_drop_down </span>
+            <div class="childLinks">
+              <ul>
+                <li><a href="#">Legislative Support Services</a></li>
+                <li><a href="#">Economy and Social Research</a></li>
+                <li><a href="#">Democracy and Governance</a></li>
+                <li><a href="#">Finance and Accounts</a></li>
+                <li><a href="#">Department of Studies</a></li>
+                <li><a href="#">Training and International Cooperation</a></li>
+                <li><a href="#">Administration and Human Resources</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="menuLinks"><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+      <div class="mobileNavbar">
+        <div class="menu_icon_parent">
+          <span class="material-symbols-outlined" id="navbar_icon"> menu </span>
+        </div>
+      </div>
+    </div>
+    <div class="mobileLinksDiv">
+      <ul class="mobileUL">
+        <li class="mobileLI">
+          <div id="homeLi" class="contentLi">
+            <a href="#">HOME</a>
+          </div>
+        </li>
+        <li class="mobileLI liWithChildLinks">
+          <div id="instituteLi" class="contentLi">
+            <a href="#">THE INSTITUTE</a>
+            <span class="material-symbols-outlined"> arrow_drop_down </span>
+          </div>
+          <div class="mobileChildLinks">
+            <ul class="mobileChildUl" id="instituteUl">
+              <li><a href="#">About the Institute</a></li>
+              <li><a href="#">Governing Council</a></li>
+              <li><a href="#">Core Areas</a></li>
+              <li><a href="#">Management</a></li>
+              <li><a href="#">DG's Office</a></li>
+              <li><a href="#">NILDS Organogram</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mobileLI liWithChildLinks">
+          <div id="newsEventLi" class="contentLi">
+            <a href="#">NEW/EVENTS</a>
+            <span class="material-symbols-outlined"> arrow_drop_down </span>
+          </div>
+
+          <div class="mobileChildLinks">
+            <ul class="mobileChildUl" id="newsEventUl">
+              <li><a href="#">News</a></li>
+              <li><a href="#">Event </a></li>
+              <li><a href="#">Quiz Competitions</a></li>
+              <li><a href="#">Media</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mobileLI liWithChildLinks">
+          <div id="resourcesLi" class="contentLi">
+            <a href="#">RESOURCES</a>
+            <span class="material-symbols-outlined"> arrow_drop_down </span>
+          </div>
+
+          <div class="mobileChildLinks">
+            <ul class="mobileChildUl" id="resourcesUl">
+              <li><a href="#">National Assembly Resources</a></li>
+              <li>
+                <div id="nildsResourcesSubChild" class="subMobilecontentLi">
+                  <a href="#">NILDS Resources </a>
+                  <span class="material-symbols-outlined">
+                    arrow_drop_down
+                  </span>
+                </div>
+
+                <ul class="mobileSubChildUl" id="resourcesSubEventUl">
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Event </a></li>
+                  <li><a href="#">Quiz Competitions</a></li>
+                  <li><a href="#">Media</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="mobileLI liWithChildLinks">
+          <div id="departmentsLi" class="contentLi">
+            <a href="#">DEPARTMENTS</a>
+            <span class="material-symbols-outlined"> arrow_drop_down </span>
+          </div>
+
+          <div class="mobileChildLinks">
+            <ul class="mobileChildUl" id="departmentsUl">
+              <li><a href="#">Legislative Support Service</a></li>
+              <li><a href="#">Economy and Social Research </a></li>
+              <li><a href="#">Democracy and Governance</a></li>
+              <li><a href="#">Finance and Accounts </a></li>
+              <li><a href="#">Departments of Studies</a></li>
+              <li><a href="#">Training and International Cooperation</a></li>
+              <li><a href="#">Administration and Human Resources</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="mobileLI">
+          <div id="contactUsLi" class="contentLi">
+            <a href="#">CONTACT US</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

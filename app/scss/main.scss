@@ -1,0 +1,310 @@
+:root {
+  --white: #fff;
+  --dark: #000;
+  --blue: #183bb3;
+  --grey: #e4e4e4;
+  --linkBackGround: #f7f8fc;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--white);
+}
+
+.container {
+  min-height: 100vh;
+  //   border: 2px solid red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .nav_container {
+    height: 120px;
+    width: 90%;
+    // border: 2px solid blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nilds_logo {
+      width: 300px;
+      height: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      @media (max-width: 1300px) {
+        width: 200px;
+      }
+    }
+    .menuLinksDiv {
+      height: 80%;
+      //   border: 2px solid blue;
+      display: flex;
+      align-items: center;
+      .menuUL {
+        // border: 2px solid blue;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        gap: 20px;
+        @media (max-width: 1300px) {
+          gap: 0;
+          width: 100%;
+          justify-content: space-between;
+        }
+        .menuLinks {
+          @media (max-width: 1300px) {
+            min-width: unset;
+          }
+          // border: 2px solid blue;
+          display: flex;
+          justify-content: center;
+          min-width: 150px;
+          cursor: pointer;
+          a {
+            color: var(--dark);
+            text-decoration: none;
+            &:hover {
+              color: var(--blue);
+            }
+            &:active {
+              color: var(--blue);
+            }
+          }
+        }
+        .linkWithChild {
+          // border: 2px solid red;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          position: relative;
+          &:hover {
+            .childLinks {
+              display: block;
+            }
+          }
+          .childLinks {
+            display: none;
+            background: none;
+            min-width: 200px;
+            position: absolute;
+            top: 0;
+
+            z-index: 3;
+            ul {
+              border: 1px solid var(--grey);
+              margin-top: 35px;
+              width: 100%;
+              list-style: none;
+
+              li {
+                list-style: none;
+                // border: 2px solid blue;
+                min-height: 35px;
+                display: flex;
+                align-items: center;
+                padding: 8px 5px 8px 15px;
+                // position: absolute;
+                a {
+                  color: var(--dark);
+                  text-decoration: none;
+                  font-size: 13px;
+                  &:hover {
+                    color: var(--blue);
+                  }
+                  &:active {
+                    color: var(--blue);
+                  }
+                }
+              }
+              .subLinkDiv {
+                border: 2px solid green;
+                position: relative;
+                &:hover {
+                  .subChildLinks {
+                    display: block;
+                  }
+                }
+                .subChildLinks {
+                  // display: none;
+                  background: none;
+                  min-width: 200px;
+                  border: 2px solid blue;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+
+                  z-index: 3;
+                  ul {
+                    margin-left: 200px;
+                    transform: translateY(-30px);
+                    border: 1px solid var(--grey);
+                    // margin-right: 105px;
+                    min-width: 120px;
+                    list-style: none;
+
+                    li {
+                      list-style: none;
+                      // border: 2px solid blue;
+                      min-height: 35px;
+                      display: flex;
+                      align-items: center;
+                      padding: 8px 5px 8px 15px;
+                      a {
+                        color: var(--dark);
+                        text-decoration: none;
+                        font-size: 13px;
+                        &:hover {
+                          color: var(--blue);
+                        }
+                        &:active {
+                          color: var(--blue);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 1300px) {
+        font-size: 12px;
+        width: 700px;
+      }
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+    .mobileNavbar {
+      display: none;
+      .menu_icon_parent {
+        span {
+          font-size: 40px;
+        }
+      }
+      @media (max-width: 900px) {
+        display: block;
+        // border: 2px solid red;
+      }
+    }
+    @media (max-width: 1300px) {
+      width: 95%;
+      gap: 100px;
+    }
+  }
+  .mobileLinksDiv {
+    position: absolute;
+    top: 0;
+    margin-top: 120px;
+    padding: 0 10px;
+    // border: 2px solid red;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.8s ease-out;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .mobileUL {
+      width: 95%;
+      // border: 2px solid blue;
+      .mobileLI {
+        list-style: none;
+        min-height: 40px;
+        // border: 1px solid green;
+        // display: flex;
+        // align-items: center;
+        position: relative;
+        // background-color: var(--linkBackGround);
+        .contentLi {
+          color: var(--dark);
+          min-height: 40px;
+          // border: 2px solid red;
+          display: flex;
+          align-items: center;
+          span {
+            margin-bottom: 5px;
+          }
+          a,
+          span {
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--dark);
+            &:hover {
+              color: var(--blue);
+              // border: 2px solid red;
+            }
+            &:active {
+              background-color: var(--linkBackGround);
+            }
+          }
+          span {
+            font-size: 18px;
+          }
+          &:active {
+            // border: 2px solid red;
+          }
+        }
+        .material-symbols-outlined {
+          //  border: 2px solid red;
+        }
+        .mobileChildLinks {
+          //   border: 2px solid red;
+          //   padding: 15px 15px;
+          //   position: absolute;
+          .mobileChildUl {
+            max-height: 0;
+            overflow: hidden;
+            li {
+              list-style: none;
+              // border: 2px solid red;
+              padding: 10px 15px;
+              a {
+                font-size: 11px;
+                text-decoration: none;
+                color: var(--dark);
+                &:hover {
+                  color: var(--blue);
+                }
+                &:active {
+                  color: var(--blue);
+                }
+              }
+              .mobileSubChildUl {
+                max-height: 0;
+                overflow: hidden;
+              }
+              .active {
+                // display: block;
+                max-height: 5000px;
+                transition: all 1.2s ease-in-out;
+              }
+            }
+            .subMobilecontentLi {
+              // border: 2px solid red;
+              display: flex;
+              align-items: center;
+            }
+          }
+          .active {
+            // display: block;
+            max-height: 5000px;
+            transition: all 1.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  .active {
+    // display: block;
+    max-height: 5000px;
+    transition: all 1.2s ease-in-out;
+  }
+}
