@@ -42,11 +42,13 @@
     }
     .menuLinksDiv {
       height: 80%;
-      //   border: 2px solid blue;
+      // border: 2px solid blue;
       display: flex;
       align-items: center;
+
       .menuUL {
         // border: 2px solid blue;
+
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -58,6 +60,7 @@
           justify-content: space-between;
         }
         .menuLinks {
+          font-size: 14px;
           @media (max-width: 1300px) {
             min-width: unset;
           }
@@ -123,7 +126,7 @@
                 }
               }
               .subLinkDiv {
-                border: 2px solid green;
+                // border: 2px solid green;
                 position: relative;
                 &:hover {
                   .subChildLinks {
@@ -131,10 +134,10 @@
                   }
                 }
                 .subChildLinks {
-                  // display: none;
+                  display: none;
                   background: none;
                   min-width: 200px;
-                  border: 2px solid blue;
+                  // border: 2px solid blue;
                   position: absolute;
                   left: 0;
                   top: 0;
@@ -184,6 +187,7 @@
       }
     }
     .mobileNavbar {
+      // border: 2px solid red;
       display: none;
       .menu_icon_parent {
         span {
@@ -208,12 +212,17 @@
     // border: 2px solid red;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.8s ease-out;
+    transition: all 0.5s ease-out;
     display: flex;
     justify-content: center;
     width: 100%;
     .mobileUL {
+      display: none;
       width: 95%;
+      @media (max-width: 900px) {
+        display: block;
+        // border: 2px solid red;
+      }
       // border: 2px solid blue;
       .mobileLI {
         list-style: none;
@@ -297,6 +306,9 @@
             // display: block;
             max-height: 5000px;
             transition: all 1.2s ease-in-out;
+            span {
+              font-size: 18px;
+            }
           }
         }
       }

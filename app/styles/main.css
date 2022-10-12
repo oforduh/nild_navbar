@@ -61,6 +61,7 @@
   }
 }
 .container .nav_container .menuLinksDiv .menuUL .menuLinks {
+  font-size: 14px;
   display: flex;
   justify-content: center;
   min-width: 150px;
@@ -123,16 +124,15 @@
   color: var(--blue);
 }
 .container .nav_container .menuLinksDiv .menuUL .linkWithChild .childLinks ul .subLinkDiv {
-  border: 2px solid green;
   position: relative;
 }
 .container .nav_container .menuLinksDiv .menuUL .linkWithChild .childLinks ul .subLinkDiv:hover .subChildLinks {
   display: block;
 }
 .container .nav_container .menuLinksDiv .menuUL .linkWithChild .childLinks ul .subLinkDiv .subChildLinks {
+  display: none;
   background: none;
   min-width: 200px;
-  border: 2px solid blue;
   position: absolute;
   left: 0;
   top: 0;
@@ -198,13 +198,19 @@
   padding: 0 10px;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.8s ease-out;
+  transition: all 0.5s ease-out;
   display: flex;
   justify-content: center;
   width: 100%;
 }
 .container .mobileLinksDiv .mobileUL {
+  display: none;
   width: 95%;
+}
+@media (max-width: 900px) {
+  .container .mobileLinksDiv .mobileUL {
+    display: block;
+  }
 }
 .container .mobileLinksDiv .mobileUL .mobileLI {
   list-style: none;
@@ -271,6 +277,9 @@
 .container .mobileLinksDiv .mobileUL .mobileLI .mobileChildLinks .active {
   max-height: 5000px;
   transition: all 1.2s ease-in-out;
+}
+.container .mobileLinksDiv .mobileUL .mobileLI .mobileChildLinks .active span {
+  font-size: 18px;
 }
 .container .active {
   max-height: 5000px;

@@ -10,11 +10,18 @@ let nildsResourcesSubChild = document.querySelector("#nildsResourcesSubChild");
 menu_hamburger.addEventListener("click", () => {
   toggleNavbar();
 });
+const handleCollapseLink = () => {
+  let instituteUl = document.querySelector("#instituteUl");
+  instituteUl.classList.remove("active");
+  console.log(`this is working`);
+};
+
 const toggleNavbar = () => {
   if (menu_hamburger.classList.contains("active")) {
     menu_hamburger.innerText = `menu`;
     menu_hamburger.classList.toggle("active");
     mobileLinksDiv.classList.toggle("active");
+    handleCollapseLink();
   } else {
     menu_hamburger.innerText = `close`;
     menu_hamburger.classList.toggle("active");
@@ -37,13 +44,11 @@ resourcesLi.addEventListener("click", () => {
 });
 departmentsLi.addEventListener("click", () => {
   let departmentsUl = document.querySelector("#departmentsUl");
-  console.log(departmentsUl);
   departmentsUl.classList.toggle("active");
 });
 
 nildsResourcesSubChild.addEventListener("click", () => {
-  console.log("yes");
   let resourcesSubEventUl = document.querySelector("#resourcesSubEventUl");
-  console.log(resourcesSubEventUl);
+
   resourcesSubEventUl.classList.toggle("active");
 });
